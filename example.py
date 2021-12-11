@@ -12,7 +12,7 @@ def my_callback(student_code_path, lab_name, **kw):
     if lab_report_path.is_file():
         print(open(lab_report_path).read())
     else:
-        raise pygrader.CallbackFailed
+        raise pygrader.CallbackFailed("Missing lab_report.txt")
 
 
 grader = pygrader.Grader("example", "lab1", "learning_suite/grades.csv", "lab1_labreport", 10)
