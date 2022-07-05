@@ -1,3 +1,8 @@
+import sys
+import pathlib
+
+YGRADER_PATH = pathlib.Path(__file__).resolve().parent / "ygrader_repo"
+sys.path.append(str(YGRADER_PATH))
 import ygrader
 
 
