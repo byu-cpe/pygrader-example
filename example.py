@@ -12,7 +12,6 @@ def my_callback(student_code_path, lab_name, **kw):
 
 
 grader = ygrader.Grader(
-    name="example",
     lab_name="lab1",
     grades_csv_path="learning_suite/grades.csv",
     grades_col_name="lab1_labreport",
