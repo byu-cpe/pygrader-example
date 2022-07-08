@@ -1,5 +1,5 @@
 {
     "python.analysis.extraPaths": [
-        "./pygrader_repo"
+        "./ygrader_repo"
     ]
 }
