@@ -5,7 +5,6 @@ YGRADER_PATH = pathlib.Path(__file__).resolve().parent / "ygrader_repo"
 sys.path.append(str(YGRADER_PATH))
 import ygrader
 
-
 def my_callback(student_code_path, lab_name, **kw):
     print("*** Grading", lab_name, "***\n")
 
@@ -19,9 +18,7 @@ def my_callback(student_code_path, lab_name, **kw):
 grader = ygrader.Grader(
     lab_name="lab1",
     grades_csv_path="learning_suite/grades.csv",
-    grades_col_name="lab1_labreport",
-    points=10,
 )
-grader.set_callback_fcn(my_callback)
+grader.add_item_to_grade("lab1_labreport", my_callback, max_points = 10)
 grader.set_submission_system_learning_suite("learning_suite/lab1_submissions.zip")
 grader.run()
